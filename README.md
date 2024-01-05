@@ -28,5 +28,7 @@ The built-in Unifi DCHP server is dnsmasq and is configured to read configuratio
 3. Restart the udm-boot.service to run the script.
     - `systemctl restart udm-boot.service`
 
- ## References
- - https://community.ui.com/questions/PXE-Network-boot-UDM-SE-Serving-files-conditionally-based-on-architecture/1843fcf6-87d5-4305-bc1d-4e55619ebb10
+## References
+- https://technotim.live/posts/netbootxyz-tutorial/#dhcp-configuration
+- https://docs.linuxserver.io/images/docker-netbootxyz/?h=netboo#router-setup-examples
+- https://community.ui.com/questions/PXE-Network-boot-UDM-SE-Serving-files-conditionally-based-on-architecture/1843fcf6-87d5-4305-bc1d-4e55619ebb10

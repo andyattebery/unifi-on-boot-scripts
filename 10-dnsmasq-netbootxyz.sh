@@ -1,5 +1,6 @@
 #!/bin/bash
 
+# Set this to your netboot.xyz server IP
 NETBOOTXYZ_SERVER_IP="192.168.1.232"
 
 cat << EOF > /run/dnsmasq.conf.d/dhcp.netbootxyz.conf
@@ -33,4 +34,5 @@ dhcp-boot=tag:uefi_arm32,netboot.xyz-arm64.efi,netboot.xyz,$NETBOOTXYZ_SERVER_IP
 dhcp-boot=tag:uefi_arm64,netboot.xyz-arm64.efi,netboot.xyz,$NETBOOTXYZ_SERVER_IP
 EOF
 
+# Restart dnsmasq
 kill `cat /run/dnsmasq.pid`
