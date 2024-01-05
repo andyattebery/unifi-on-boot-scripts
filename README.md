@@ -4,6 +4,8 @@
 
 This enables persistent scripts on Unifi gateways that run on boot.
 
+It will run executable (`chmod +x`) scripts that end in `.sh` which are in `/data/on_boot.d`.
+
 ### Installation
 
 1. [Enable ssh for UnifiOS](https://help.ui.com/hc/en-us/articles/204909374-UniFi-Connect-with-SSH-Advanced-)
@@ -23,7 +25,7 @@ The built-in Unifi DCHP server is dnsmasq and is configured to read configuratio
 ### Installation
 
 1. Set the `NETBOOTXYZ_SERVER_IP` variable at the top of the `10-dnsmasq-netbootxyz.sh` file to your netboot.xyz server IP.
-2. Copy the `10-dnsmasq-netbootxyz.sh` file to your Unifi gateway.
+2. Copy the `10-dnsmasq-netbootxyz.sh` file to your Unifi gateway's Unifi On Boot directory (`/data/on_boot.d`).
     - `scp 10-dnsmasq-netbootxyz.sh root@<unifi-ip>:/data/on_boot.d`
 3. Restart the udm-boot.service to run the script.
     - `systemctl restart udm-boot.service`
